@@ -1,2 +1,2 @@
-# dao_scenes_ranking
+# DAO Scenes Ranking
 Queries to build the Scenes Ranking
