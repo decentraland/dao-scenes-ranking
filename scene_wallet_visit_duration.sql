@@ -18,7 +18,6 @@ WITH tile_visits_and_scenes AS (
         ) AS scene_session_group
     FROM
         {{ 'scene_wallet_movement' }}
-    WHERE is_bot = FALSE AND is_guest = FALSE
     ORDER BY session_id ASC, visit_at ASC
 ),
 
