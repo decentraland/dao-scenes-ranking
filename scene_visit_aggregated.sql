@@ -26,7 +26,7 @@ SELECT
     AVG(svd.days_visited) AS avg_days_returned,
     SUM(svd.visits) / 30 AS avg_daily_visits,
     COUNT(DISTINCT svd.wallet_id) / 30 AS avg_daily_unique_visitors
-FROM {{ 'scene_wallet_visit_duration' }} AS svd
+FROM {{ 'scene_visit_web3' }} AS svd
 LEFT JOIN current_scene_metadata AS cs ON svd.tile_id_base = cs.tile_id_base
 WHERE cs.type NOT IN ('road', 'plaza')
 GROUP BY
